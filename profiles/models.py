@@ -16,7 +16,7 @@ class Profile(models.Model):
     currently_reading = models.TextField(max_length=350, blank=True)
     favourite_coffee = models.TextField(max_length=350, blank=True)
     pets_name = models.TextField(max_length=350, blank=True)
-    pets_pic = models.ImageField(upload_to='images/', default='../default_kejxo8', blank=True)
+    pets_pic = models.ImageField(upload_to='images/', blank=True)
 
     class Meta: 
         ordering = ['created_at']
