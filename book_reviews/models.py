@@ -1,12 +1,9 @@
 from django.db import models
 from django.contrib.auth.models import User
 
-RATING = ((1, "⭐"), (2, "⭐⭐"), (3, "⭐⭐⭐"), (4, "⭐⭐⭐⭐"), (5, "⭐⭐⭐⭐⭐"))
+RATING = ((5, "⭐⭐⭐⭐⭐"), (4, "⭐⭐⭐⭐"), (3, "⭐⭐⭐"), (2, "⭐⭐"), (1, "⭐"))
 
 class BookReview(models.Model):
-    """
-    Post model, related to 'owner', i.e. a User instance.
-    """
     owner = models.ForeignKey(User, on_delete=models.CASCADE)
     created_at = models.DateTimeField(auto_now_add=True)
     updated_at = models.DateTimeField(auto_now=True)
@@ -14,13 +11,13 @@ class BookReview(models.Model):
     author = models.CharField(max_length=255)
     genre = models.CharField(max_length=255)
     rating = models.IntegerField(choices=RATING, default=None)
-    your_review = models.TextField(blank=True)
     image = models.ImageField(
-        upload_to='images/', blank=True
+        upload_to='images/', default='../default_kejxo8', blank=True
     )
+    your_review = models.TextField(blank=True)
 
     class Meta:
         ordering = ['-created_at']
 
     def __str__(self):
-        return f'{self.owner} {self.book_title}'
+        return f'{self.id} {self.book_title}'

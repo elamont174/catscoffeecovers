@@ -10,13 +10,12 @@ class Profile(models.Model):
     created_at = models.DateTimeField(auto_now_add=True)
     updated_at = models.DateTimeField(auto_now=True)
     name = models.CharField(max_length=255, blank=False)
-    image = models.ImageField(upload_to='images/', default='../default_kejxo8')
+    profile_pic = models.ImageField(upload_to='images/', default='../default_kejxo8')
     bio = models.TextField(max_length=500, blank=True)
     location = models.TextField(max_length=255, blank=True)
     currently_reading = models.TextField(max_length=350, blank=True)
     favourite_coffee = models.TextField(max_length=350, blank=True)
     pets_name = models.TextField(max_length=350, blank=True)
-    pets_pic = models.ImageField(upload_to='images/', blank=True)
 
     class Meta: 
         ordering = ['created_at']
