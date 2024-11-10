@@ -1,5 +1,5 @@
 from django.http import Http404
-from rest_framework import status, permissions
+from rest_framework import status, generics, permissions, filters
 from rest_framework.response import Response
 from rest_framework.views import APIView
 from .models import BookReview
@@ -8,9 +8,14 @@ from catscoffeecovers.permissions import IsOwnerOrReadOnly
 
 class BookReviewList(APIView):
     serializer_class = BookReviewSerializer
-    permission_classes = [
-        permissions.IsAuthenticatedOrReadOnly
+    permission_classes = [permissions.IsAuthenticatedOrReadOnly]
+    filter_backends = [
+            filters.SearchFilter
+        ]
+    search_fields = [
+        'book_title', 'author', 'genre'
     ]
+    
 
     def get(self, request):
         book_reviews = BookReview.objects.all()
