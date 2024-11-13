@@ -8,6 +8,8 @@ class BookReviewSerializer(serializers.ModelSerializer):
     profile_id = serializers.ReadOnlyField(source='owner.profile.id')
     image = serializers.ReadOnlyField(source='owner.profile.image.url')
     like_id = serializers.SerializerMethodField()
+    likes_count = serializers.ReadOnlyField()
+    comments_count = serializers.ReadOnlyField()
 
     def validate_image(self, value):
         if value.size > 2 * 1024 * 1024:
@@ -38,6 +40,7 @@ class BookReviewSerializer(serializers.ModelSerializer):
     class Meta:
         model = BookReview
         fields = [
-            'id', 'owner', 'is_owner', 'profile_id', 'created_at', 'updated_at', 'book_title',
-            'author', 'genre', 'rating', 'your_review', 'image', 'like_id',
+            'id', 'owner', 'is_owner', 'profile_id', 'created_at', 'updated_at', 
+            'book_title', 'author', 'genre', 'rating', 'your_review', 'image', 
+            'like_id', 'likes_count', 'comments_count',
         ]
