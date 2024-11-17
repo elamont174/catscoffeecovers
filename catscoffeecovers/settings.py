@@ -64,7 +64,7 @@ DEBUG = True
 CSRF_TRUSTED_ORIGINS = ['https://8000-elamont174-catscoffeeco-7lf51kayvku.ws.codeinstitute-ide.net']
 
 ALLOWED_HOSTS = [
-   os.environ.get('ALLOWED_HOST'),
+   'catscoffeecovers-448595c73efd.herokuapp.com,
    '8000-elamont174-catscoffeeco-7lf51kayvku.ws.codeinstitute-ide.net',
 ]
 
