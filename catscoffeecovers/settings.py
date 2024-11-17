@@ -59,11 +59,14 @@ REST_AUTH_SERIALIZERS = {
 SECRET_KEY = os.getenv('SECRET_KEY')
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = 'DEV' in os.environ
+DEBUG = True
 
 CSRF_TRUSTED_ORIGINS = ['https://8000-elamont174-catscoffeeco-7lf51kayvku.ws.codeinstitute-ide.net']
 
-ALLOWED_HOSTS = ['localhost', 'catscoffeecovers-448595c73efd.herokuapp.com/']
+ALLOWED_HOSTS = [
+   os.environ.get('ALLOWED_HOST'),
+   '8000-elamont174-catscoffeeco-7lf51kayvku.ws.codeinstitute-ide.net',
+]
 
 
 # Application definition
