@@ -2,6 +2,7 @@ from rest_framework import serializers
 from .models import BookReview
 from likes.models import Like
 
+
 class BookReviewSerializer(serializers.ModelSerializer):
     owner = serializers.ReadOnlyField(source='owner.username')
     is_owner = serializers.SerializerMethodField()
@@ -29,18 +30,19 @@ class BookReviewSerializer(serializers.ModelSerializer):
         return request.user == obj.owner
 
     def get_like_id(self, obj):
-            user = self.context['request'].user
-            if user.is_authenticated:
-                like = Like.objects.filter(
-                    owner=user, post=obj
-                ).first()
-                return like.id if like else None
-            return None
+        user = self.context['request'].user
+        if user.is_authenticated:
+            like = Like.objects.filter(
+                owner=user, post=obj
+            ).first()
+            return like.id if like else None
+        return None
 
     class Meta:
         model = BookReview
         fields = [
-            'id', 'owner', 'is_owner', 'profile_id', 'created_at', 'updated_at', 
-            'book_title', 'author', 'genre', 'rating', 'your_review', 'image', 
-            'like_id', 'likes_count', 'comments_count',
+            'id', 'owner', 'is_owner', 'profile_id', 'created_at',
+            'updated_at', 'book_title', 'author', 'genre', 'rating',
+            'your_review', 'image', 'like_id', 'likes_count',
+            'comments_count',
         ]
