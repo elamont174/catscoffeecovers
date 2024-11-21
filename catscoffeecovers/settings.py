@@ -112,8 +112,6 @@ if 'CLIENT_ORIGIN_DEV' in os.environ:
 
 CORS_ALLOW_CREDENTIALS = True
 
-CORS_ORIGIN_WHITELIST = [https://3000-elamont174-catscoffeeco-c8byfjme9hi.ws.codeinstitute-ide.net/]
-
 ROOT_URLCONF = 'catscoffeecovers.urls'
 
 TEMPLATES = [
