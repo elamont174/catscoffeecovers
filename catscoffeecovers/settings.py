@@ -66,6 +66,7 @@ CSRF_TRUSTED_ORIGINS = ['https://8000-elamont174-catscoffeeco-7lf51kayvku.ws.cod
 ALLOWED_HOSTS = [
    'catscoffeecovers-448595c73efd.herokuapp.com',
    '8000-elamont174-catscoffeeco-7lf51kayvku.ws.codeinstitute-ide.net',
+   '3000-elamont174-catscoffeeco-c8byfjme9hi.ws.codeinstitute-ide.net',
 ]
 
 
