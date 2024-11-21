@@ -108,11 +108,10 @@ if "CLIENT_ORIGIN" in os.environ:
     CORS_ALLOWED_ORIGINS = [os.environ.get("CLIENT_ORIGIN")]
 
 CORS_ALLOWED_ORIGIN_REGEXES = [
-    r"^https://3000-elamont174-catscoffeeco-c8byfjme9hi.ws.codeinstitute-ide\.net$"]
+    r"^https://.*\.codeinstitute-ide\.net$"
 
 
 CORS_ALLOW_CREDENTIALS = True
-
 
 
 ROOT_URLCONF = 'catscoffeecovers.urls'
