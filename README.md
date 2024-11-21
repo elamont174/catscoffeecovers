@@ -78,61 +78,12 @@
 6. You now have a URL you can use to connect your app to your database.
 
 ### Deployment
-
-Site is deployed with Heroku which is a cloud platform that lets developers create, deploy, monitor and manage apps.
-The deployed site can be found [here](https://catscoffeecovers-448595c73efd.herokuapp.com/).
-These steps assume that you have a Heroku account and are logged in. 
-
-**Creating an app**
-1. Go to the Dashboard
-2. Click 'New' > 'Create new app'
-3. Choose a unique app name, choose the closest region and press 'Create app'
-4. Click on 'Settings' and then 'Reveal Config Vars'
-5. Add a key of 'DATABASE_URL' - the value will be the URL you were emailed when creating your database.
-6. The app has been created
-
-**Deploying**
-1. Go to the app Dashboard
-2. Click the 'Settings' tab
-3. Click 'Reveal Config Vars' and add these Config Vars:
-- (KEY)CLOUDINARY_URL: (VALUE) Copy the Cloudinary URL from your env.py file without quotation marks
-- (KEY)SECRET_KEY: (VALUE) Make up a completely new Secret Key that is NOT the same as the one in settings or env - there are many online Secret Key generators you can search for. 
-- (KEY)DISABLE_COLLECTSTATIC: (VALUE)1
-4. Click the 'Deploy' tab
-5. In the Deployment method section, click "Connect to GitHub"
-6. Search for the repo you want to connect and click 'Connect'
-7. Scroll down and click "Deploy Branch" in the Manual deploy section
-8. Your app has been deployed! You can find it in "Open app".
-
-**Cloning a repository**
-1. On GitHub.com, navigate to the repository you want to clone.
-2. Click the "Code" button (found above the list of files).
-3. Copy the URL for the repository.
-4. Open Git Bash or your chosen terminal.
-5. Navigate to the directory where you want to clone the repository.
-6. Type: git clone https://github.com/elamont174/ey-up-me-pup.git
-7. Press Enter to create your local clone.
-
-**Forking a repository**
-1. 'Forking' the GitHub repository means creating a copy which can be viewed/changed without changing the original.
-2. To fork a GitHub repository:
-3. Login to GitHub and navigate to the repository you want to fork.
-4. Click the "Fork" button (found above the Settings button).
-5. You will now have a copy of the original repository in your GitHub account.
-
-*Once the project is cloned or forked, in order to run it locally, you'll need to follow these steps:
-
-- Run the server: python3 manage.py runserver
-- Stop the app once it's loaded: CTRL+C or ⌘+C
-- Make any necessary migrations: python3 manage.py makemigrations
-- Migrate the data to the database: python3 manage.py migrate
-- Create a superuser: python3 manage.py createsuperuser
-
+Please see separate [DEPLOYMENT.md](DEPLOYMENT.md) file for full deployment steps.
 
 ### Security
 
 ### Testing 
-Please see separate TESTING.md file for all testing.
+Please see separate [TESTING.md](TESTING.md) file for all testing.
 
 ## Front-end documentation
 ### User experience
@@ -149,8 +100,10 @@ Please see separate TESTING.md file for all testing.
 ### Responsiveness
 ### Accessibility
 ### Deployment
+Please see separate [DEPLOYMENT.md](DEPLOYMENT.md) file for full deployment steps.
+
 ### Testing
-Please see separate TESTING.md file for all testing.
+Please see separate [TESTING.md](TESTING.md) file for all testing.
 
 ## Future improvements
 
