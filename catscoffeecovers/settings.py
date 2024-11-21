@@ -61,7 +61,7 @@ SECRET_KEY = os.getenv('SECRET_KEY')
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = 'DEV' in os.environ
 
-CSRF_TRUSTED_ORIGINS = ['https://8000-elamont174-catscoffeeco-7lf51kayvku.ws.codeinstitute-ide.net', 'https://3000-elamont174-catscoffeeco-c8byfjme9hi.ws.codeinstitute-ide.net/']
+CSRF_TRUSTED_ORIGINS = ['https://8000-elamont174-catscoffeeco-7lf51kayvku.ws.codeinstitute-ide.net']
 
 ALLOWED_HOSTS = [
    'catscoffeecovers-448595c73efd.herokuapp.com',
@@ -111,6 +111,8 @@ if 'CLIENT_ORIGIN_DEV' in os.environ:
     ]
 
 CORS_ALLOW_CREDENTIALS = True
+
+CORS_ORIGIN_WHITELIST = [https://3000-elamont174-catscoffeeco-c8byfjme9hi.ws.codeinstitute-ide.net/]
 
 ROOT_URLCONF = 'catscoffeecovers.urls'
 
