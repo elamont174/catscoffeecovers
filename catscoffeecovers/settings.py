@@ -94,7 +94,7 @@ INSTALLED_APPS = [
 
 MIDDLEWARE = [
     'corsheaders.middleware.CorsMiddleware',
-    'corsheaders.middleware.CorsPostCsrfMiddleware'
+    # 'corsheaders.middleware.CorsPostCsrfMiddleware'
     'django.middleware.security.SecurityMiddleware',
     'django.contrib.sessions.middleware.SessionMiddleware',
     'django.middleware.common.CommonMiddleware',
@@ -112,7 +112,6 @@ CORS_ALLOWED_ORIGIN_REGEXES = [
 
 
 CORS_ALLOW_CREDENTIALS = True
-
 
 ROOT_URLCONF = 'catscoffeecovers.urls'
 
