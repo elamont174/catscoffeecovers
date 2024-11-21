@@ -1,8 +1,6 @@
 from django.db import models
 from django.contrib.auth.models import User
 
-RATING = ((5, "⭐⭐⭐⭐⭐"), (4, "⭐⭐⭐⭐"), (3, "⭐⭐⭐"), (2, "⭐⭐"), (1, "⭐"))
-
 
 class BookReview(models.Model):
     owner = models.ForeignKey(User, on_delete=models.CASCADE)
@@ -11,7 +9,6 @@ class BookReview(models.Model):
     book_title = models.CharField(max_length=255)
     author = models.CharField(max_length=255)
     genre = models.CharField(max_length=255)
-    rating = models.IntegerField(choices=RATING, default=None)
     image = models.ImageField(
         upload_to='images/', default='../default_kejxo8', blank=True
     )
