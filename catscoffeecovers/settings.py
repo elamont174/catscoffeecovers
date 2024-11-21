@@ -66,7 +66,6 @@ CSRF_TRUSTED_ORIGINS = ['https://8000-elamont174-catscoffeeco-7lf51kayvku.ws.cod
 ALLOWED_HOSTS = [
    'catscoffeecovers-448595c73efd.herokuapp.com',
    '8000-elamont174-catscoffeeco-7lf51kayvku.ws.codeinstitute-ide.net',
-   '3000-elamont174-catscoffeeco-c8byfjme9hi.ws.codeinstitute-ide.net',
 ]
 
 
@@ -112,7 +111,6 @@ if 'CLIENT_ORIGIN_DEV' in os.environ:
     ]
 
 CORS_ALLOW_CREDENTIALS = True
-CORS_ORIGIN_ALLOW_ALL = True
 
 ROOT_URLCONF = 'catscoffeecovers.urls'
 
