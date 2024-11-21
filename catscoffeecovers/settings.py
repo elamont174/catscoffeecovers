@@ -85,6 +85,10 @@ INSTALLED_APPS = [
     'rest_framework.authtoken',
     'dj_rest_auth',
     'dj_rest_auth.registration',
+    'django.contrib.sites',
+    'allauth',
+    'allauth.account',
+    'allauth.socialaccount',
     'corsheaders',
     'profiles',
     'book_reviews',
@@ -92,9 +96,10 @@ INSTALLED_APPS = [
     'likes',
     'followers',   ]
 
+SITE_ID = 1
+
 MIDDLEWARE = [
     'corsheaders.middleware.CorsMiddleware',
-    # 'corsheaders.middleware.CorsPostCsrfMiddleware'
     'django.middleware.security.SecurityMiddleware',
     'django.contrib.sessions.middleware.SessionMiddleware',
     'django.middleware.common.CommonMiddleware',
