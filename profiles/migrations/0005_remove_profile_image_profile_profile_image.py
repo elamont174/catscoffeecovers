@@ -6,7 +6,7 @@ from django.db import migrations, models
 class Migration(migrations.Migration):
 
     dependencies = [
-        ('profiles', '0004_rename_profile_image_profile_image'),
+        ('profiles', '0004_rename_profile_pic_profile_pic'),
     ]
 
     operations = [
@@ -16,7 +16,7 @@ class Migration(migrations.Migration):
         ),
         migrations.AddField(
             model_name='profile',
-            name='profile_image',
+            name='profile_pic',
             field=models.ImageField(default='../default_ifhb1q', upload_to='images/'),
         ),
     ]
