@@ -42,7 +42,7 @@ class BookReviewSerializer(serializers.ModelSerializer):
         model = BookReview
         fields = [
             'id', 'owner', 'is_owner', 'profile_id', 'created_at',
-            'updated_at', 'book_title', 'author', 'genre', 'rating',
+            'updated_at', 'book_title', 'author', 'genre',
             'your_review', 'image', 'like_id', 'likes_count',
             'comments_count',
         ]
