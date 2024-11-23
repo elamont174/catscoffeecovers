@@ -7,7 +7,7 @@ class ProfileSerializer(serializers.ModelSerializer):
     owner = serializers.ReadOnlyField(source='owner.username')
     is_owner = serializers.SerializerMethodField()
     following_id = serializers.SerializerMethodField()
-    posts_count = serializers.ReadOnlyField()
+    book_reviews_count = serializers.ReadOnlyField()
     followers_count = serializers.ReadOnlyField()
     following_count = serializers.ReadOnlyField()
 
@@ -30,5 +30,5 @@ class ProfileSerializer(serializers.ModelSerializer):
             'id', 'owner', 'created_at', 'updated_at', 'name',
             'image', 'bio', 'location', 'currently_reading',
             'favourite_coffee', 'pets_name', 'is_owner', 'following_id',
-            'posts_count', 'followers_count', 'following_count',
+            'book_reviews_count', 'followers_count', 'following_count',
         ]
