@@ -10,7 +10,7 @@ class BookReview(models.Model):
     author = models.CharField(max_length=255)
     genre = models.CharField(max_length=255)
     image = models.ImageField(
-        upload_to='images/', default='../default_kejxo8', blank=True
+        upload_to='images/', default='../default_ifhb1q', blank=True
     )
     your_review = models.TextField(blank=True)
 
