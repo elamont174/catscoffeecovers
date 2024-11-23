@@ -4,10 +4,10 @@ from rest_framework import serializers
 
 class CurrentUserSerializer(UserDetailsSerializer):
     profile_id = serializers.ReadOnlyField(source='profile.id')
-    profile_pic = serializers.ReadOnlyField(
+    profile_profile_pic = serializers.ReadOnlyField(
         source='profile.profile_pic.url')
 
     class Meta(UserDetailsSerializer.Meta):
         fields = UserDetailsSerializer.Meta.fields + (
-            'profile_id', 'profile_pic'
+            'profile_id', 'profile_profile_pic'
         )

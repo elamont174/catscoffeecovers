@@ -9,7 +9,7 @@ class Profile(models.Model):
     updated_at = models.DateTimeField(auto_now=True)
     name = models.CharField(max_length=255, blank=False)
     profile_pic = models.ImageField(
-        upload_to='images/', default='../default_ifhb1q')
+        upload_to='images/', default='../default_kejxo8')
     bio = models.TextField(max_length=500, blank=True)
     location = models.TextField(max_length=255, blank=True)
     currently_reading = models.TextField(max_length=350, blank=True)
