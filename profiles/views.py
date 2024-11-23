@@ -8,7 +8,7 @@ from .serializers import ProfileSerializer
 
 class ProfileList(generics.ListAPIView):
     queryset = Profile.objects.annotate(
-        bookreviews_count=Count('owner__bookreview', distinct=True),
+        posts_count=Count('owner__bookreview', distinct=True),
         followers_count=Count('owner__followed', distinct=True),
         following_count=Count('owner__following', distinct=True)
     ).order_by('-created_at')
@@ -22,7 +22,7 @@ class ProfileList(generics.ListAPIView):
         'owner__followed__owner__profile',
     ]
     ordering_fields = [
-        'bookreviews_count',
+        'posts_count',
         'followers_count',
         'following_count',
         'owner__following__created_at',
@@ -33,7 +33,7 @@ class ProfileList(generics.ListAPIView):
 class ProfileDetail(generics.RetrieveUpdateAPIView):
     permission_classes = [IsOwnerOrReadOnly]
     queryset = Profile.objects.annotate(
-        bookreviews_count=Count('owner__bookreview', distinct=True),
+        posts_count=Count('owner__bookreview', distinct=True),
         followers_count=Count('owner__followed', distinct=True),
         following_count=Count('owner__following', distinct=True)
     ).order_by('-created_at')
