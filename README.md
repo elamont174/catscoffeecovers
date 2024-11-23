@@ -1,4 +1,7 @@
 # Cats, Coffee and Covers
+
+This is the README for the Back-end API - other information can be found in the Front-end repository documentation [here](https://github.com/elamont174/catscoffeecovers).
+
 ## Project Overview
 ### Target Audience
 ### Problem Statement
