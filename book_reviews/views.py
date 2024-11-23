@@ -11,7 +11,6 @@ class BookReviewList(generics.ListCreateAPIView):
     permission_classes = [permissions.IsAuthenticatedOrReadOnly]
     queryset = BookReview.objects.annotate(
         likes_count=Count('likes', distinct=True),
-        comments_count=Count('comment', distinct=True)
     ).order_by('-created_at')
     filter_backends = [
         filters.OrderingFilter,
@@ -31,7 +30,6 @@ class BookReviewList(generics.ListCreateAPIView):
     ]
     ordering_fields = [
         'likes_count',
-        'comments_count',
         'likes__created_at',
     ]
 
@@ -44,5 +42,4 @@ class BookReviewDetail(generics.RetrieveUpdateDestroyAPIView):
     permission_classes = [IsOwnerOrReadOnly]
     queryset = BookReview.objects.annotate(
         likes_count=Count('likes', distinct=True),
-        comments_count=Count('comment', distinct=True)
     ).order_by('-created_at')

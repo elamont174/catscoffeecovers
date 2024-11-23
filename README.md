@@ -97,7 +97,7 @@ Please see separate [TESTING.md](TESTING.md) file for all testing.
 ### Features
 #### Profiles
 #### Reviews
-#### Comments
+
 #### Followers
 #### Navigation
 ### Responsiveness

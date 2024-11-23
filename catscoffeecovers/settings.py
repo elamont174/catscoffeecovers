@@ -93,7 +93,6 @@ INSTALLED_APPS = [
     'corsheaders',
     'profiles',
     'book_reviews',
-    'comments',
     'likes',
     'followers',   ]
 
