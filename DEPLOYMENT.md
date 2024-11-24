@@ -122,7 +122,7 @@ ALLOWED_HOSTS = [
 3. Copy the URL for the repository.
 4. Open Git Bash or your chosen terminal.
 5. Navigate to the directory where you want to clone the repository.
-6. Type: git clone https://github.com/elamont174/ey-up-me-pup.git
+6. Type: git clone "URL OF REPOSITORY YOU WANT TO CLONE"
 7. Press Enter to create your local clone.
 
 **Forking a repository**
