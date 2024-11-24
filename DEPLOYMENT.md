@@ -1,6 +1,6 @@
 # Deployment
 
-Site is deployed with Heroku which is a cloud platform that lets developers create, deploy, monitor and manage apps.
+Site is deployed with [Heroku](https://www.heroku.com/) which is a cloud platform that lets developers create, deploy, monitor and manage apps.
 The deployed site can be found [here](https://catscoffeecovers-448595c73efd.herokuapp.com/).
 These steps assume that you have a Heroku account and are logged in. 
 

@@ -1,6 +1,7 @@
 from django.db import models
 from django.contrib.auth.models import User
 
+"""Allows users to 'follow' and be 'followed' by other users"""
 
 class Follower(models.Model):
     owner = models.ForeignKey(
