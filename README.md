@@ -31,9 +31,10 @@ Please see separate [TESTING.md](TESTING.md) file for all testing.
 - Python
 
 ## Technologies used
-- [Cloudinary](https://cloudinary.com/)
-- Django REST Framework
-- Code Institute Postgres Database server
+- [Cloudinary](https://cloudinary.com/) was used for photo storage.
+- Django REST Framework connects the Front-end to the Back-end.
+- Code Institute PostgresSQL Database server was used to store data on profiles, likes and followers.
+- Gunicorn is a Python WSGI HTTP server which was used to run the Django application on Heroku in production.
 
 ## Credits
 - The Code Institute DRF API walkthrough was used as a base to create this API. Customised models were used to make the project unique. 
