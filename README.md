@@ -1,6 +1,6 @@
 # Cats, Coffee and Covers
 
--This is the README for the Back-end API - other information can be found in the Front-end repository documentation [here](https://github.com/elamont174/catscoffeecovers).
+-This is the README for the Back-end API - other information can be found in the Front-end repository documentation [here](https://github.com/elamont174/cats-coffee-covers).
 
 ## Project Overview
 - A Django Rest Framework API was made, connected to a PostgreSQL database and deployed to Heroku before being connected to a React application in order to create the website "Cats, Coffee & Covers".
