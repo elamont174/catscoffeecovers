@@ -2,8 +2,6 @@
 # TESTING
 
 ## Validators
-### HTML
-### CSS
 ### Python
 - [PEP8](https://pep8ci.herokuapp.com/) was used to test python files.
 - All returned clear.
